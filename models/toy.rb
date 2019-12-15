@@ -59,7 +59,7 @@ class Toy
       (
         $1, $2, $3, $4, $5
       )
-      WHERE id = $6"
+      RETURNING id"
       values = [@name, @description, @stock_quantity, @buying_cost, @selling_price]
       SqlRunner.run(sql, values)
     end

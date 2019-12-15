@@ -39,5 +39,13 @@
     value="<%= @toy.selling_price() %>"
     />
 
-    <input type='submit' value="Edit Toy">
-  </form>
+    <label for="id-field">Toy id number:</label>
+    <input
+    type="number"
+    name="id"
+    id="id-field"
+    value="<%= @toy.id() %>"
+    />
+
+    <input type='submit' value="Submit">
+    </form>
