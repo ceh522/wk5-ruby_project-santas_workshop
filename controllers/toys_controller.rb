@@ -11,7 +11,6 @@ end
 
 # new
 get '/toys/new' do
-  # @houses = House.all()
   erb( :"toys/new" )
 end
 
