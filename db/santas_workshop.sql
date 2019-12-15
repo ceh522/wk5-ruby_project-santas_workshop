@@ -13,7 +13,7 @@ CREATE TABLE toys
   id SERIAL primary key,
   name VARCHAR(255) not null,
   description VARCHAR(255),
-  stock_quantity INT;
-  buying_cost INT;
+  stock_quantity INT,
+  buying_cost INT,
   selling_price INT
 );
