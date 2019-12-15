@@ -1,0 +1,43 @@
+<form method="post" action="/toys/<%= @toy.id %>">
+    <label for="name-field">Name:</label>
+    <input
+    type="text"
+    name="name"
+    id="name-field"
+    value="<%= @toy.name %>"
+    />
+
+    <label for="description-field">Description:</label>
+    <input
+    type="text"
+    name="description"
+    id="description-field"
+    value="<%= @toy.description%>"
+    />
+
+    <label for="stock_quantity-field">Stock quantity:</label>
+    <input
+    type="number"
+    name="stock_quantity"
+    id="stock_quantity-field"
+    value="<%= @toy.stock_quantity() %>"
+    />
+
+    <label for="buying_cost-field">Buying cost:</label>
+    <input
+    type="number"
+    name="buying_cost"
+    id="buying_cost-field"
+    value="<%= @toy.buying_cost() %>"
+    />
+
+    <label for="selling_price-field">Selling price:</label>
+    <input
+    type="number"
+    name="selling_price"
+    id="selling_price-field"
+    value="<%= @toy.selling_price() %>"
+    />
+
+    <input type='submit' value="Edit Toy">
+  </form>
