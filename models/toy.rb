@@ -69,11 +69,12 @@ class Toy
       WHERE id = $1"
       values = [@id]
       SqlRunner.run(sql, values)
-
-      def self.delete_all
-        sql = "DELETE FROM toys"
-        SqlRunner.run( sql )
-      end
-
-
     end
+
+    def self.delete_all
+      sql = "DELETE FROM toys"
+      SqlRunner.run( sql )
+    end
+
+
+  end
