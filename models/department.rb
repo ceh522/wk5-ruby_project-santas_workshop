@@ -37,22 +37,23 @@ attr_accessor :id, :name, :number_of_elves
     sql = "SELECT * FROM departments
     WHERE id = $1"
     values = [id]
-    results = SqlRunner.run( sql, values )
-    return Department.new( results.first )
+    result = SqlRunner.run( sql, values ).first
+    department = Department.new( result )
+    return department
   end
 
   def update()
-    sql = "UPDATE department
+    sql = "UPDATE departments
     SET
     (
       name,
       number_of_elves
       ) =
       (
-        $1, $2,
+        $1, $2
       )
       WHERE id = $3"
-      values = [@name, @number_of_elves]
+      values = [@name, @number_of_elves, @id]
       SqlRunner.run(sql, values)
     end
 
