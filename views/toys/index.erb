@@ -3,6 +3,8 @@
 <p> Name: <%=toy.name%></p>
 <p> Description: <%=toy.description %></p>
 <p> Stock quantity: <%=toy.stock_quantity %></p>
+<p><%= if toy.stock_quantity.to_i == 0 then return >OUT OF STOCK< %><%end%></p>
+<p><%= if toy.stock_quantity.to_i < 1000 then return >LOW STOCK< %><%end%></p>
 <p> Value (GoodWill Points): <%=toy.value %></p>
 <p><a href="/toys/<%=toy.id %>">Click to edit</a></p>
 <hr>
