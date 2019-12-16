@@ -14,6 +14,5 @@ CREATE TABLE toys
   name VARCHAR(255) not null,
   description VARCHAR(255),
   stock_quantity INT,
-  buying_cost INT,
-  selling_price INT
+  value INT
 );

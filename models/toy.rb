@@ -3,15 +3,15 @@ require_relative( '../db/sql_runner' )
 
 class Toy
 
-  attr_accessor :id, :name, :description, :stock_quantity, :buying_cost, :selling_price
+  attr_accessor :id, :name, :description, :stock_quantity, :value
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @description = options['description']
     @stock_quantity = options['stock_quantity'].to_i
-    @buying_cost = options['buying_cost'].to_i
-    @selling_price = options['selling_price'].to_i
+    @value = options['value'].to_i
+
   end
 
   def save()
@@ -20,15 +20,14 @@ class Toy
       name,
       description,
       stock_quantity,
-      buying_cost,
-      selling_price
+      value
     )
     VALUES
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4
     )
     RETURNING id"
-    values = [@name, @description, @stock_quantity, @buying_cost, @selling_price]
+    values = [@name, @description, @stock_quantity, @value]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -54,14 +53,13 @@ class Toy
       name,
       description,
       stock_quantity,
-      buying_cost,
-      selling_price
+      value
       ) =
       (
-        $1, $2, $3, $4, $5
+        $1, $2, $3, $4
       )
       RETURNING id"
-      values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @id]
+      values = [@name, @description, @stock_quantity, @value, @id]
       SqlRunner.run(sql, values)
     end
 
