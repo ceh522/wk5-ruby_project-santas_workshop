@@ -9,7 +9,7 @@ department2 = Department.new({'name' => 'Wooden Toys', 'number_of_elves' => 200}
 department1.save
 department2.save
 
-toy1 = Toy.new({'name' => 'Teddy Bear', 'description' => 'Traditional faun-coloured teddy bear', 'stock_quantity' => 7354, 'buying cost' => 12, 'selling price' => 6 })
+toy1 = Toy.new({'name' => 'Teddy Bear', 'description' => 'Traditional faun-coloured teddy bear', 'stock_quantity' => 7354, 'buying_cost' => 12, 'selling_price' => 6 })
 toy2 = Toy.new({'name' => 'Toy Cat', 'description' => 'Cuddly cat toy', 'stock_quantity' => 4869, 'buying_cost' => 8, 'selling_price' => 4 })
 
 

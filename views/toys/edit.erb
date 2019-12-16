@@ -1,9 +1,10 @@
 <form method="post" action="/toys/<%= @toy.id %>">
+
     <label for="name-field">Name:</label>
     <input
     type="text"
     name="name"
-    id="name-field"
+    id="name"
     value="<%= @toy.name%>"
     />
 
@@ -11,7 +12,7 @@
     <input
     type="text"
     name="description"
-    id="description-field"
+    id="description"
     value="<%= @toy.description%>"
     />
 
@@ -19,7 +20,7 @@
     <input
     type="number"
     name="stock_quantity"
-    id="stock_quantity-field"
+    id="stock_quantity"
     value="<%= @toy.stock_quantity%>"
     />
 
@@ -27,7 +28,7 @@
     <input
     type="number"
     name="buying_cost"
-    id="buying_cost-field"
+    id="buying_cost"
     value="<%= @toy.buying_cost%>"
     />
 
@@ -35,7 +36,7 @@
     <input
     type="number"
     name="selling_price"
-    id="selling_price-field"
+    id="selling_price"
     value="<%= @toy.selling_price%>"
     />
 
