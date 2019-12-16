@@ -41,6 +41,7 @@ end
 
 # destroy
 post '/toys/:id/delete' do
-  Toy.delete( params[:id] )
+  toy = Toy.find( params[:id].to_i )
+  toy.delete()
   redirect to '/toys'
 end
