@@ -8,7 +8,7 @@ attr_accessor :id, :name, :number_of_elves
   def initialize ( options )
     @id = options['id'].to_i if options['id']
     @name =  options ['name']
-    @number_of_elves = options ['number_of_elves']
+    @number_of_elves = options ['number_of_elves'].to_i
   end
 
   def save()
