@@ -1,6 +1,8 @@
 <p> Name: <%=@department.name%></p>
 <p> Number of elves: <%=@department.number_of_elves %></p>
+
 <p><a href="/departments/<%=@department.id%>/edit">Edit Department</a></p>
+
 <form method="post" action="/departments/ <%= @department.id %>/delete">
   <input type="submit" value="Delete Department"/>
 </form>

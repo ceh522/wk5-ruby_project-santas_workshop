@@ -1,5 +1,6 @@
 require_relative( '../db/sql_runner' )
 
+
 class Toy
 
   attr_accessor :id, :name, :description, :stock_quantity, :buying_cost, :selling_price
@@ -64,15 +65,15 @@ class Toy
       SqlRunner.run(sql, values)
     end
 
-    def self.delete( id )
-      sql = "DELETE * FROM toys
+    def delete()
+      sql = "DELETE FROM toys
       WHERE id = $1"
       values = [@id]
       SqlRunner.run(sql, values)
     end
 
     def self.delete_all
-      sql = "DELETE FROM toys"
+      sql = "DELETE * FROM toys"
       SqlRunner.run( sql )
     end
 

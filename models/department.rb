@@ -1,5 +1,6 @@
 require_relative( '../db/sql_runner')
 
+
 class Department
 
 attr_accessor :id, :name, :number_of_elves
@@ -55,8 +56,8 @@ attr_accessor :id, :name, :number_of_elves
       SqlRunner.run(sql, values)
     end
 
-  def self.delete( id )
-    sql = "DELETE from departments
+  def delete()
+    sql = "DELETE FROM departments
     WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)

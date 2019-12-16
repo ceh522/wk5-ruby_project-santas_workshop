@@ -1,6 +1,6 @@
 require_relative( "../models/department.rb" )
 require_relative( "../models/toy.rb" )
-require("pry")
+
 
 
 department1 = Department.new({'name' => 'Soft Toys', 'number_of_elves' => 600})
@@ -15,7 +15,3 @@ toy2 = Toy.new({'name' => 'Toy Cat', 'description' => 'Cuddly cat toy', 'stock_q
 
 toy1.save
 toy2.save
-
-
-binding.pry
-nil
