@@ -2,6 +2,7 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/toy.rb' )
 also_reload( '../models/*' )
+require('pry')
 
 # index
 get '/toys' do
@@ -41,7 +42,9 @@ end
 
 # destroy
 post '/toys/:id/delete' do
-  toy = Toy.find( params[:id] )
-  toy.delete()
+  @toy.delete( params[:id] )
   redirect to '/toys'
 end
+
+binding.pry
+null
