@@ -1,5 +1,8 @@
 <%@departments.each do |department| %>
+
 <p> Name: <%=department.name %></p>
-<p><a href="/departments/<%= department.id %>">Show more</a></p>
+<p> Number of elves <%=department.number_of_elves %></p>
+<p><a href="/departments/<%= department.id %>">Click to edit</a></p>
 <hr>
+
 <%end%>
