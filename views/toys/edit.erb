@@ -1,6 +1,6 @@
 <form method="post" action="/toys/<%= @toy.id %>">
 
-    <label for="name-field">Name:</label>
+    <label for="name">Name:</label>
     <input
     type="text"
     name="name"
@@ -8,7 +8,7 @@
     value="<%= @toy.name%>"
     />
 
-    <label for="description-field">Description:</label>
+    <label for="description">Description:</label>
     <input
     type="text"
     name="description"
@@ -30,13 +30,6 @@
     name="value"
     id="value"
     value="<%= @toy.value%>"
-    />
-
-    <label for="department_name">Department:</label>
-    <input
-    type="text"
-    name="department_name"
-    value="<%= @toy.department_name%>"
     />
 
     <input type='submit' value="Edit Toy">

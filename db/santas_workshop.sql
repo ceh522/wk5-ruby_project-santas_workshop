@@ -15,5 +15,5 @@ CREATE TABLE toys
   description VARCHAR(255),
   stock_quantity INT,
   value INT,
-  department_name INT REFERENCES departments(name)
+  department_id INT REFERENCES departments(id)
 );
