@@ -61,7 +61,7 @@ class Toy
         $1, $2, $3, $4, $5
       )
       RETURNING id"
-      values = [@name, @description, @stock_quantity, @buying_cost, @selling_price]
+      values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @id]
       SqlRunner.run(sql, values)
     end
 
