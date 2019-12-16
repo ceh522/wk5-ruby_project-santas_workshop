@@ -14,5 +14,6 @@ CREATE TABLE toys
   name VARCHAR(255) not null,
   description VARCHAR(255),
   stock_quantity INT,
-  value INT
+  value INT,
+  department_name INT REFERENCES departments(name)
 );
