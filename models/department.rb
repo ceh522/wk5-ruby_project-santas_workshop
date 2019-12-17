@@ -42,20 +42,20 @@ attr_accessor :id, :name, :number_of_elves
     return department
   end
 
-  def update()
-    sql = "UPDATE departments
-    SET
-    (
+
+    def update()
+    sql = "
+    UPDATE departments SET (
       name,
       number_of_elves
-      ) =
-      (
-        $1, $2
-      )
-      WHERE id = $3"
-      values = [@name, @number_of_elves]
-      SqlRunner.run(sql, values)
-    end
+    ) =
+    (
+      $1, $2
+    )
+    WHERE id = $3"
+    values = [@name, @number_of_elves, @id]
+    SqlRunner.run(sql, values)
+  end
 
   def delete()
     sql = "DELETE FROM departments

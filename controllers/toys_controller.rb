@@ -16,7 +16,7 @@ end
 
 # show
 get '/toys/:id/?' do
-  @toy = Toy.find( params[:id].to_i ) 
+  @toy = Toy.find( params[:id].to_i )
   erb( :"toys/show" )
 end
 
