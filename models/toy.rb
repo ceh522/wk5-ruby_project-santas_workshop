@@ -55,14 +55,14 @@ class Toy
       name,
       description,
       stock_quantity,
-      value
+      value,
       department_id
-      ) =
+      )=
       (
         $1, $2, $3, $4, $5
       )
       WHERE id = $6"
-      values = [@name, @description, @stock_quantity, @value, @department_id, @id]
+      values = [@name, @description, @stock_quantity, @value, @department_id]
       SqlRunner.run(sql, values)
     end
 

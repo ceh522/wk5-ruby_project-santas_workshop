@@ -16,7 +16,7 @@
     value="<%= @toy.description%>"
     />
 
-    <label for="stock_quantity-field">Stock quantity:</label>
+    <label for="stock_quantity">Stock quantity:</label>
     <input
     type="number"
     name="stock_quantity"
@@ -30,6 +30,14 @@
     name="value"
     id="value"
     value="<%= @toy.value%>"
+    />
+
+    <label for="department_id">Department:</label>
+    <input
+    type="number"
+    name="department_id"
+    id="department_id"
+    value="<%= @toy.department_id%>"
     />
 
     <input type='submit' value="Edit Toy">

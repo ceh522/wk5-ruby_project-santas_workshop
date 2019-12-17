@@ -6,7 +6,7 @@
 <% if toy.stock_quantity.to_i == 0 %>
 <p> >OUT OF STOCK< </p>
     <% elsif toy.stock_quantity.to_i < 1000 %>
-<p> >LOW STOCK< </p>
+<p> >STOCK BELOW TARGET< </p>
 <%end%>
 <p> Value (GoodWill Points): <%=toy.value %></p>
 <p> Department: <%=toy.department_id %></p>
