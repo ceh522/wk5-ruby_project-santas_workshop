@@ -29,7 +29,7 @@ class Toy
       $1, $2, $3, $4, $5
     )
     RETURNING id"
-    values = [@name, @description, @stock_quantity, @value, @department_id]
+    values = [@name, @description, @stock_quantity, @value, @department_id, @id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -62,7 +62,7 @@ class Toy
         $1, $2, $3, $4, $5
       )
       WHERE id = $6"
-      values = [@name, @description, @stock_quantity, @value, @department_id]
+      values = [@name, @description, @stock_quantity, @value, @department_id, @id]
       SqlRunner.run(sql, values)
     end
 

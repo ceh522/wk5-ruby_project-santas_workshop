@@ -1,19 +1,21 @@
+<h2>Department details</h2>
+
 <form method="post" action="/departments/<%= @department.id %>">
-<ul><label for="name-field">Name:</label>
+<label for="name-field">Name:</label>
 <input
 type="text"
 name="name"
 id="name"
 value="<%= @department.name %>"
-/></ul>
+/>
 
-<ul><label for="number_of_elves-field">Number of elves:</label>
+<label for="number_of_elves-field">Number of elves:</label>
 <input
 type="number"
 name="number_of_elves"
 id="number_of_elves"
 value="<%= @department.number_of_elves() %>"
-/></ul>
+/>
 
 <input type='submit' value="Edit Department">
 </form>

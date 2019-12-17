@@ -1,3 +1,5 @@
+<h2>Toy List</h2>
+
 <form method="post" action="/toys/<%= @toy.id %>">
 
     <label for="name">Name:</label>
@@ -32,13 +34,13 @@
     value="<%= @toy.value%>"
     />
 
-    <label for="department_id">Department:</label>
+    <ul><label for="department_id">Department:</label>
     <input
     type="number"
     name="department_id"
     id="department_id"
     value="<%= @toy.department_id%>"
-    />
+    /></ul>
 
     <input type='submit' value="Edit Toy">
     </form>

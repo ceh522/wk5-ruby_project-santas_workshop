@@ -21,7 +21,7 @@ get '/toys/:id/?' do
 end
 
 # create
-post '/toys/?' do
+post '/toys' do
   @toy = Toy.new(params)
   @toy.save()
   erb( :"toys/create" )
@@ -34,7 +34,7 @@ erb( :"toys/edit" )
 end
 
 # update
-post '/toys/:id/?' do
+post '/toys/:id' do
   Toy.new( params ).update
   redirect to '/toys'
 end
