@@ -14,10 +14,10 @@ department2.save
 department3.save
 department4.save
 
-toy1 = Toy.new({'name' => 'Teddy Bear', 'description' => 'Traditional faun-coloured teddy bear', 'stock_quantity' => 7354, 'stock_target' => 13567, 'value' => 12})
-toy2 = Toy.new({'name' => 'Toy Cat', 'description' => 'Cuddly cat toy', 'stock_quantity' => 4869, 'stock_target' => 12457, 'value' => 8})
-toy3 = Toy.new({'name' => 'Wooden castle', 'description' => 'Wooden model of Carcasonne', 'stock_quantity' => 300, 'stock_target' => 457, 'value' => 10})
-toy4 = Toy.new({'name' => 'Remote-controlled car', 'description' => 'Remote-controlled red Porsche', 'stock_quantity' => 0, 'stock_target' => 757, 'value' => 6})
+toy1 = Toy.new({'name' => 'Teddy Bear', 'description' => 'Traditional faun-coloured teddy bear', 'stock_quantity' => 7354, 'stock_target' => 13567, 'value' => 12, 'department_id' => department1.id})
+toy2 = Toy.new({'name' => 'Toy Cat', 'description' => 'Cuddly cat toy', 'stock_quantity' => 4869, 'stock_target' => 12457, 'value' => 8, 'department_id' => department1.id})
+toy3 = Toy.new({'name' => 'Wooden castle', 'description' => 'Wooden model of Carcasonne', 'stock_quantity' => 300, 'stock_target' => 457, 'value' => 10, 'department_id' => department2.id})
+toy4 = Toy.new({'name' => 'Remote-controlled car', 'description' => 'Remote-controlled red Porsche', 'stock_quantity' => 0, 'stock_target' => 757, 'value' => 6, 'department_id' => department3.id})
 
 toy1.save
 toy2.save
