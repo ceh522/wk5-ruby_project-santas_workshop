@@ -1,5 +1,8 @@
 <br>
 <h2>Toy Inventory</h2>
+<br>
+<p id="top"</p>
+
 
 <%@toys.each do |toy| %>
 
@@ -16,5 +19,7 @@
 <p><em> Department id: </em><%=toy.department_id %></p>
 <p><a href="/toys/<%=toy.id %>">Click to edit</a></p>
 <hr>
-
 <%end%>
+<br>
+<a href="#top">Top of the page</a>
+<br>
