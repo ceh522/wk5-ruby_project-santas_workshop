@@ -7,16 +7,16 @@
       <th>Name</th>
       <th>Number of elves</th>
       <th>Click to edit</th>
-
-      <%@departments.each do |department| %>
-      <tr>
-      <td><%=department.name %></td>
-      <td><%=department.number_of_elves %></td>
-      <td><a href="/departments/<%= department.id %>">Edit</a></td>
-      <%end%>
     </tr>
   </thead>
   <tbody>
-
-
-    
+    <tr>
+      <%@departments.each do |department| %>
+      <tr>
+        <td><%=department.name %></td>
+        <td><%=department.number_of_elves %></td>
+        <td><a href="/departments/<%= department.id %>">Edit</a></td>
+        <%end%>
+      </tr>
+    </tbody>
+    <table>

@@ -3,35 +3,36 @@
 <br>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Stock quantity</th>
-        <th>Stock target</th>
-        <th>Stock Warning</th>
-        <th>Value</th>
-        <th>Department id</th>
-        <th>Click to edit</th>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Stock quantity</th>
+      <th>Stock target</th>
+      <th>Stock Warning</th>
+      <th>Value</th>
+      <th>Department id</th>
+      <th>Click to edit</th>
+    </tr>
+  </thead>
 
-        <%@toys.each do |toy| %>
-        <tr>
-          <th><%=toy.name%></th>
-          <td><%=toy.description %></td>
-          <td><%=toy.stock_quantity %></td>
-          <td><%=toy.stock_target %></td>
-          <td><% if toy.stock_quantity.to_i == 0 %>
-          <strong>>OUT OF STOCK<</strong>
-          <% elsif toy.stock_quantity.to_i < toy.stock_target.to_i/2 %>
-           <em><strong>>STOCK BELOW TARGET<</strong></em>
-          <%end%></td>
-          <td><%=toy.value %></td>
-          <td><%=toy.department_id %></td>
-          <td><a href="/toys/<%=toy.id %>">Edit</a></td>
-          <%end%>
-         </tr>
-        </thead>
-        <tbody>
-
-        
+  <%@toys.each do |toy| %>
+  <tbody>
+    <tr>
+      <th><%=toy.name%></th>
+      <td><%=toy.description %></td>
+      <td><%=toy.stock_quantity %></td>
+      <td><%=toy.stock_target %></td>
+      <td><% if toy.stock_quantity.to_i == 0 %>
+        <strong>>OUT OF STOCK<</strong>
+        <% elsif toy.stock_quantity.to_i < toy.stock_target.to_i/2 %>
+        <em><strong>>STOCK BELOW TARGET<</strong></em>
+        <%end%></td>
+        <td><%=toy.value %></td>
+        <td><%=toy.department_id %></td>
+        <td><a href="/toys/<%=toy.id %>">Edit</a></td>
+        <%end%>
+      </tr>
+    </tbody>
+  </table>
