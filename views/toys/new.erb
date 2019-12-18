@@ -17,8 +17,13 @@
   <label for="value">Value (GWP):</label>
   <input type="number" min="0" name="value" id="value">
 
-  <label for="department">Department id:</label>
-  <input type="number" name="department_id" id="department">
+  <label for="department">Department:</label>
+  <select name="department_id" id="department">
+    <% @departments.each do |department| %>
+    <option value=<%= department.id %>><%= department.name %></option>
+    <% end %>
+  </select>
+
 
   <input type="submit" value="Submit">
 
