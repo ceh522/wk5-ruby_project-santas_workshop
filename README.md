@@ -41,15 +41,8 @@ Inspired by
 
 eBay, Amazon (back end only), Magento
 
-Possible Extensions
 
-Calculate the markup on items in the store, and display it in the inventory
-Filter the inventory list by manufacturer. For example, provide an option to view all books in stock by a certain author.
-Categorise your items. Books might be categorised by genre (crime, horror, romance...) and cars might be categorised by type (SUV, coupé, hatchback...). Provide an option to filter the inventory list by these categories.
-Mark manufacturers as active/deactivated. Deactivated manufacturers will not appear when creating new products.
+Created:
 
-Created: 
-
-- Santa's Workshop
-- an inventory system to allow Santa to keep track of the kinds of toys that are being produced and the departments making toys
-- can view, update, add and delete toys and departments 
+- Santa's Workshop - an inventory system to allow Santa to keep track of the kinds of toys that are being produced and the departments making toys
+- can view, update, add and delete toys and departments
