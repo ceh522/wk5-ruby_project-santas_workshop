@@ -1,11 +1,22 @@
 <br>
 <h2>Department List</h2>
 
-<%@departments.each do |department| %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of elves</th>
+      <th>Click to edit</th>
 
-<p><em>Name: </em><%=department.name %></p>
-<p><em>Number of elves: </em><%=department.number_of_elves %></p>
-<p><a href="/departments/<%= department.id %>">Click to edit</a></p>
-<hr>
+      <%@departments.each do |department| %>
+      <tr>
+      <td><%=department.name %></td>
+      <td><%=department.number_of_elves %></td>
+      <td><a href="/departments/<%= department.id %>">Edit</a></td>
+      <%end%>
+    </tr>
+  </thead>
+  <tbody>
 
-<%end%>
+
+    

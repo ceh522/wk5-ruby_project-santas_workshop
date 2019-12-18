@@ -1,25 +1,37 @@
 <br>
 <h2>Toy Inventory</h2>
 <br>
-<p id="top"</p>
 
 
-<%@toys.each do |toy| %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Stock quantity</th>
+        <th>Stock target</th>
+        <th>Stock Warning</th>
+        <th>Value</th>
+        <th>Department id</th>
+        <th>Click to edit</th>
 
-<p><em> Name: </em><%=toy.name%></p>
-<p><em> Description: </em><%=toy.description %></p>
-<p><em>Stock quantity: </em><%=toy.stock_quantity %></p>
-<p><em>Stock target: </em><%=toy.stock_target %></p>
-<% if toy.stock_quantity.to_i == 0 %>
-<p><em><strong>>OUT OF STOCK<</strong></em></p>
-<% elsif toy.stock_quantity.to_i < toy.stock_target.to_i/2 %>
-<p> <em><strong>>STOCK BELOW TARGET<</strong></em></p>
-<%end%>
-<p><em>Value (GoodWill Points): </em><%=toy.value %></p>
-<p><em> Department id: </em><%=toy.department_id %></p>
-<p><a href="/toys/<%=toy.id %>">Click to edit</a></p>
-<hr>
-<%end%>
-<br>
-<a href="#top">Top of the page</a>
-<br>
+        <%@toys.each do |toy| %>
+        <tr>
+          <th><%=toy.name%></th>
+          <td><%=toy.description %></td>
+          <td><%=toy.stock_quantity %></td>
+          <td><%=toy.stock_target %></td>
+          <td><% if toy.stock_quantity.to_i == 0 %>
+          <strong>>OUT OF STOCK<</strong>
+          <% elsif toy.stock_quantity.to_i < toy.stock_target.to_i/2 %>
+           <em><strong>>STOCK BELOW TARGET<</strong></em>
+          <%end%></td>
+          <td><%=toy.value %></td>
+          <td><%=toy.department_id %></td>
+          <td><a href="/toys/<%=toy.id %>">Edit</a></td>
+          <%end%>
+         </tr>
+        </thead>
+        <tbody>
+
+        
