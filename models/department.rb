@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner')
 
 class Department
 
-attr_accessor :id, :name, :number_of_elves
+  attr_accessor :id, :name, :number_of_elves
 
   def initialize ( options )
     @id = options['id'].to_i if options['id']
@@ -43,36 +43,32 @@ attr_accessor :id, :name, :number_of_elves
   end
 
 
-    def update()
+  def update()
     sql = "
     UPDATE departments SET (
       name,
       number_of_elves
-    ) =
-    (
-      $1, $2
-    )
-    WHERE id = $3"
-    values = [@name, @number_of_elves, @id]
-    SqlRunner.run(sql, values)
+      ) =
+      (
+        $1, $2
+      )
+      WHERE id = $3"
+      values = [@name, @number_of_elves, @id]
+      SqlRunner.run(sql, values)
+    end
+
+    def delete()
+      sql = "DELETE FROM departments
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run(sql, values)
+    end
+
+    def self.delete_all
+      sql = "DELETE FROM departments"
+      SqlRunner.run( sql )
+    end
+
+
+
   end
-
-  def delete()
-    sql = "DELETE FROM departments
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql, values)
-  end
-
-  def self.delete_all
-    sql = "DELETE FROM departments"
-    SqlRunner.run( sql )
-  end
-
-
-
-
-
-
-
-end

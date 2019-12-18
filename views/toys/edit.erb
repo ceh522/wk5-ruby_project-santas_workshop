@@ -2,54 +2,57 @@
 
 <form method="post" action="/toys/<%= @toy.id %>">
 
-    <label for="name">Name:</label>
-    <input
-    type="text"
-    name="name"
-    id="name"
-    value="<%= @toy.name%>"
-    />
+  <label for="name">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name"
+  value="<%= @toy.name%>"
+  />
 
-    <label for="description">Description:</label>
-    <input
-    type="text"
-    name="description"
-    id="description"
-    value="<%= @toy.description%>"
-    />
+  <label for="description">Description:</label>
+  <input
+  type="text"
+  name="description"
+  id="description"
+  value="<%= @toy.description%>"
+  />
 
-    <label for="stock_quantity">Stock quantity:</label>
-    <input
-    type="number"
-    name="stock_quantity"
-    id="stock_quantity"
-    value="<%= @toy.stock_quantity%>"
-    />
+  <label for="stock_quantity">Stock quantity:</label>
+  <input
+  type="number"
+  name="stock_quantity"
+  id="stock_quantity"
+  value="<%= @toy.stock_quantity%>"
+  />
 
-    <label for="stock_target">Stock target:</label>
-    <input
-    type="number"
-    name="stock_target"
-    id="stock_target"
-    value="<%= @toy.stock_target%>"
-    />
+  <label for="stock_target">Stock target:</label>
+  <input
+  type="number"
+  name="stock_target"
+  id="stock_target"
+  value="<%= @toy.stock_target%>"
+  />
 
-    <label for="value">Value (GWP):</label>
-    <input
-    type="number"
-    name="value"
-    id="value"
-    value="<%= @toy.value%>"
-    />
+  <label for="value">Value (GWP):</label>
+  <input
+  type="number"
+  name="value"
+  id="value"
+  value="<%= @toy.value%>"
+  />
 
-    <label for="department_id">Value (GWP):</label>
-    <input
-    type="number"
-    name="department_id"
-    id="department_id"
-    value="<%= @toy.department_id%>"
-    />
+  <label for="department">Department:</label>
+  <select name="department_id" id="department" selected="<%=@toy.department_id %>">
+    <% @departments.each do |department| %>
+    <% if department.id == @toy.department_id %>
+    <option value=<%= department.id%> selected><%= department.name %></option>
+    <% else %>
+    <option value=<%= department.id %>><%= department.name %></option>
+    <% end %>
+    <% end %>
+  </select>
 
 
-    <input type='submit' value="Edit Toy">
-    </form>
+  <input type='submit' value="Edit Toy">
+</form>

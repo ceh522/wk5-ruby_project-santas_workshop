@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/department.rb' )
+require_relative( '../models/toy.rb' )
 also_reload( '../models/*' )
 
 # index
@@ -29,8 +30,8 @@ end
 
 # edit
 get '/departments/:id/edit' do
-@department = Department.find( params[:id] )
-erb( :"departments/edit" )
+  @department = Department.find( params[:id] )
+  erb( :"departments/edit" )
 end
 
 # update

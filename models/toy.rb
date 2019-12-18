@@ -80,6 +80,9 @@ class Toy
       SqlRunner.run( sql )
     end
 
-
+    def department()
+      department = Department.find(@department_id)
+      return department
+    end
 
   end
