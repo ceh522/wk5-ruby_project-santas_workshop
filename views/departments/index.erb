@@ -2,8 +2,8 @@
 
 <%@departments.each do |department| %>
 
-<p> Name: <%=department.name %></p>
-<p> Number of elves: <%=department.number_of_elves %></p>
+<p><em>Name: </em><%=department.name %></p>
+<p><em>Number of elves: </em><%=department.number_of_elves %></p>
 <p><a href="/departments/<%= department.id %>">Click to edit</a></p>
 <hr>
 
