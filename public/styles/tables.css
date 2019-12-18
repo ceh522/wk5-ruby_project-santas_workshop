@@ -2,7 +2,11 @@ table {
   border: 1px solid black;
 }
 
-td {
-  text-align: left;
+th, td {
+  text-align: center;
   padding: 10px 20px 0px 0px;
 }
+
+tr:hover {background-color: green;}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
