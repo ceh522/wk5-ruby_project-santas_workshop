@@ -1,5 +1,5 @@
 body {
-  background: white url('/images/markus-spiske.jpg');
+  background-image: white url('/images/markus-spiske.jpg');
   background-size:cover, 50px;
   background-repeat: no-repeat;
   font-family: 'Lato', sans-serif;
