@@ -43,6 +43,9 @@
   value="<%= @toy.value%>"
   />
 
+  <br>
+  <br>
+
   <label for="department">Department:</label>
   <select name="department_id" id="department" selected="<%=@toy.department_id %>">
     <% @departments.each do |department| %>
@@ -54,5 +57,5 @@
     <% end %>
   </select>
 
-  <div <input type='submit' value="Edit Toy"></div>
+  <input type='submit' value="Edit Toy">
 </form>

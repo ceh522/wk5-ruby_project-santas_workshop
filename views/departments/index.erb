@@ -9,14 +9,14 @@
       <th>Click to edit</th>
     </tr>
   </thead>
+
   <tbody>
+    <%@departments.each do |department| %>
     <tr>
-      <%@departments.each do |department| %>
-      <tr>
-        <td><%=department.name %></td>
-        <td><%=department.number_of_elves %></td>
-        <td><a href="/departments/<%= department.id %>">Edit</a></td>
-        <%end%>
-      </tr>
-    </tbody>
-    <table>
+      <td><%=department.name %></td>
+      <td><%=department.number_of_elves %></td>
+      <td><a href="/departments/<%= department.id %>">Edit</a></td>
+      <%end%>
+    </tr>
+  </tbody>
+  <table>
