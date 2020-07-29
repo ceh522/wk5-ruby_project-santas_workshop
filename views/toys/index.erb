@@ -12,7 +12,7 @@
       <th>Stock target</th>
       <th>Stock Warning</th>
       <th>Value</th>
-      <th>Department id</th>
+      <th>Department</th>
       <th>Click to edit</th>
     </tr>
   </thead>
@@ -31,7 +31,7 @@
         <em><strong>>STOCK BELOW TARGET<</strong></em>
         <%end%></td>
         <td><%=toy.value %></td>
-        <td><%=toy.department_id %></td>
+        <td><%=toy.department.name %></td>
         <td><a href="/toys/<%=toy.id %>">Edit</a></td>
         <%end%>
       </tr>

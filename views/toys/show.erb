@@ -8,7 +8,7 @@
 <p> Value (GoodWill Points): <%=@toy.value %></p>
 <p> Department id: <%=@toy.department_id %></p>
 
-<p><a href="/toys/<%=@toy.id%>/edit">Edit Toy</a></p>
+<p><a href="/toys/<%=@toy.id%>/edit">Click to Edit Toy</a></p>
 
 <form method="post" action="/toys/ <%= @toy.id %>/delete">
   <input type="submit" value="Delete Toy"/>

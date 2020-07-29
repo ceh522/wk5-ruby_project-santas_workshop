@@ -3,7 +3,7 @@ Practising using SQL, Ruby, Sinatra - Week 5 project
 
 Project - Web Programming with Ruby
 
-Over the next week you will build an app to consolidate and expand on everything you have learned:
+Focusing on:
 
 Object oriented programming with Ruby
 Test Driven Development
@@ -17,12 +17,6 @@ HTML / CSS
 Ruby
 Sinatra
 PostgreSQL and the PG gem
-It must NOT use:
-
-Any Object Relational Mapper (e.g. ActiveRecord)
-JavaScript. At all. Don't even think about it.
-Any pre-built CSS libraries, such as Bootstrap.
-Authentication. Assume that the user already has secure access to the app.
 
 
 Shop Inventory
